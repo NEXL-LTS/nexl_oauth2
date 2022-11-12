@@ -22,9 +22,9 @@ module OmniAuth
 
       info do
         {
-          :name => [raw_info.dig('me', 'firstName'),raw_info.dig('me', 'lastName')].join(" ").strip,
-          :first_name => raw_info.dig('me', 'firstName'),
-          :last_name => raw_info.dig('me', 'lastName'),
+          :name => [raw_info.dig('data', 'me', 'firstName'),raw_info.dig('data', 'me', 'lastName')].join(" ").strip,
+          :first_name => raw_info.dig('data', 'me', 'firstName'),
+          :last_name => raw_info.dig('data', 'me', 'lastName'),
           :email => raw_info.dig('data', 'me', 'email'),
         }
       end
